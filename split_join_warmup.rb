@@ -10,19 +10,21 @@ world_cup_news
 
 # enter your solutions inside the methods
 def goal(goal_message)
-
+  goal_message = "GOOOOOOOAL!!!!"
+  goal_message*2
 end
 
 def generate_an_array_of_teams(team_list)
-
+  team_list = ["Brazil", "Mexico", "Cameroon", "Croatia", "Netherlands", "Chile", "Australia", "Spain", "Germany", "Ghana", "US", "Protugal"]
 end
 
 def number_of_teams(team_list)
-
+  team_list = ["Brazil", "Mexico", "Cameroon", "Croatia", "Netherlands", "Chile", "Australia", "Spain", "Germany", "Ghana", "US", "Protugal"]
+  team_list.count
 end
 
 def return_australia(team_list)
-
+  
 end
 
 def starts_with_C(team_list)
