@@ -16,6 +16,7 @@ end
 
 def generate_an_array_of_teams(team_list)
   team_list = ["Brazil", "Mexico", "Cameroon", "Croatia", "Netherlands", "Chile", "Australia", "Spain", "Germany", "Ghana", "US", "Protugal"]
+  #team_list.split(",")
 end
 
 def number_of_teams(team_list)
@@ -24,19 +25,29 @@ def number_of_teams(team_list)
 end
 
 def return_australia(team_list)
-  
+  team_list.split(", ")[6]
+  #team_list.scan("Australia").join("")
 end
 
 def starts_with_C(team_list)
+  team_list.split(",").select { |country| country.include?('C')}
 
 end
 
 def block_string_to_single_line(long_string)
-
+  long_string.split(",").join("").gsub("\n"," ").strip
 end
 
 def capitalize_every_third_word(long_string)
-
+  third = long_string.chomp.gsub("\n", " ").downcase.split(", ")
+  stuff = []
+  third.each_with_index do |x, i|
+    if i == 0 || i % 3 == 0
+      stuff[i] = x.capitalize!
+    end
+    stuff[i] = x
+  end
+  return stuff = stuff.join(" ")
 end
 
 check("goal method", goal(goal_message) == "GOOOOOOOAL!!!!GOOOOOOOAL!!!!")
